@@ -1,293 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alejandro Clemente | Full Stack Developer</title>
-    <meta name="description"
-        content="Portafolio profesional de Alejandro Clemente, Full Stack Developer especializado en Node.js, NestJS, React, .NET y arquitectura de software." />
+    <title>Alejandro Clemente | Senior Software Engineer</title>
+    <meta name="description" content="Portfolio of Alejandro Clemente." />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <div class="container nav">
-            <a href="#" class="logo">Alejandro<span>.</span>dev</a>
-            <nav class="nav-links">
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#skills">Stack</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+            <a href="#" class="logo" id="site-logo">Alejandro Clemente</a>
+            <nav class="nav-links" aria-label="Primary" id="site-nav"></nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-wrap">
-                <div>
-                    <div class="tag">Full Stack Developer · Remote-first</div>
-                    <h1>Construyo software moderno, escalable y orientado a resultados.</h1>
-                    <p>
-                        Soy Alejandro Clemente, desarrollador full stack con experiencia en
-                        Node.js, NestJS, React, .NET, microservicios, APIs y arquitectura de software.
-                        Me enfoco en crear soluciones limpias, mantenibles y listas para producción.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#contacto">Hablemos</a>
-                        <a class="btn btn-secondary" href="#proyectos">Ver proyectos</a>
-                    </div>
-
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <strong>Backend</strong>
-                            <span>NestJS, Node.js, .NET, APIs REST</span>
-                        </div>
-                        <div class="stat">
-                            <strong>Frontend</strong>
-                            <span>React, Angular, UI reutilizable</span>
-                        </div>
-                        <div class="stat">
-                            <strong>DevOps</strong>
-                            <span>Docker, CI/CD, bases de datos, cloud</span>
-                        </div>
-                    </div>
-                </div>
-
-                <aside class="card hero-card">
-                    <div class="hero-card-content">
-                        <h3>Lo que aporto</h3>
-                        <ul class="hero-list">
-                            <li>
-                                <small>Arquitectura</small>
-                                Diseño de soluciones escalables con enfoque en mantenibilidad.
-                            </li>
-                            <li>
-                                <small>Producto</small>
-                                Desarrollo de funcionalidades alineadas con objetivos de negocio.
-                            </li>
-                            <li>
-                                <small>Entrega</small>
-                                Integración de buenas prácticas, testing y despliegue continuo.
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <section id="sobre-mi" class="section">
-            <div class="container">
-                <h2 class="section-title">Sobre mí</h2>
-                <p class="section-subtitle">
-                    Perfil técnico con foco en desarrollo web moderno, integración de sistemas y evolución de
-                    plataformas.
-                </p>
-
-                <div class="grid about-grid">
-                    <div class="card">
-                        <h3 style="margin-bottom: 14px;">Perfil profesional</h3>
-                        <p style="color: var(--muted);">
-                            He trabajado en proyectos relacionados con CMS, microservicios, migración de datos,
-                            interfaces dinámicas y desarrollo full stack. Combino experiencia en tecnologías
-                            enterprise con herramientas modernas y multiplataforma.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 style="margin-bottom: 14px;">Enfoque</h3>
-                        <p style="color: var(--muted);">
-                            Me interesa construir productos sólidos, bien documentados y fáciles de evolucionar,
-                            aplicando principios de arquitectura limpia, separación de responsabilidades,
-                            pruebas y automatización.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Stack tecnológico</h2>
-                <p class="section-subtitle">
-                    Tecnologías con las que puedo aportar valor en productos web, APIs y plataformas internas.
-                </p>
-
-                <div class="grid skills-grid">
-                    <div class="card skill-card">
-                        <h3>Backend</h3>
-                        <ul class="skill-list">
-                            <li>Node.js</li>
-                            <li>NestJS</li>
-                            <li>.NET / ASP.NET Core</li>
-                            <li>REST APIs</li>
-                            <li>Microservicios</li>
-                        </ul>
-                    </div>
-
-                    <div class="card skill-card">
-                        <h3>Frontend</h3>
-                        <ul class="skill-list">
-                            <li>React</li>
-                            <li>Angular</li>
-                            <li>TypeScript</li>
-                            <li>Componentes reutilizables</li>
-                            <li>Responsive UI</li>
-                        </ul>
-                    </div>
-
-                    <div class="card skill-card">
-                        <h3>Base de datos</h3>
-                        <ul class="skill-list">
-                            <li>PostgreSQL</li>
-                            <li>MySQL</li>
-                            <li>SQL Server</li>
-                            <li>ETL / migración de datos</li>
-                            <li>Optimización SQL</li>
-                        </ul>
-                    </div>
-
-                    <div class="card skill-card">
-                        <h3>DevOps & calidad</h3>
-                        <ul class="skill-list">
-                            <li>Docker</li>
-                            <li>CI/CD</li>
-                            <li>Git / GitFlow</li>
-                            <li>Jest / testing</li>
-                            <li>SonarQube</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="proyectos" class="section">
-            <div class="container">
-                <h2 class="section-title">Proyectos destacados</h2>
-                <p class="section-subtitle">
-                    Ejemplos del tipo de soluciones en las que puedo trabajar o que puedes mostrar en tu portafolio.
-                </p>
-
-                <div class="grid projects-grid">
-                    <article class="card project-card">
-                        <div class="project-meta">CMS · Integración · Datos</div>
-                        <h3>Plataforma de gestión de contenidos</h3>
-                        <p>
-                            Solución para administrar contenido corporativo, con migración de datos,
-                            estructura reutilizable y soporte para evolución funcional.
-                        </p>
-                        <ul class="project-list">
-                            <li>Arquitectura mantenible</li>
-                            <li>Integración con sistemas existentes</li>
-                            <li>Enfoque en continuidad operativa</li>
-                        </ul>
-                    </article>
-
-                    <article class="card project-card">
-                        <div class="project-meta">APIs · Backend · Escalabilidad</div>
-                        <h3>Backend modular para servicios web</h3>
-                        <p>
-                            Desarrollo de una API organizada por dominios, preparada para autenticación,
-                            pruebas y crecimiento hacia microservicios.
-                        </p>
-                        <ul class="project-list">
-                            <li>NestJS / .NET</li>
-                            <li>Buenas prácticas de arquitectura</li>
-                            <li>Preparado para CI/CD</li>
-                        </ul>
-                    </article>
-
-                    <article class="card project-card">
-                        <div class="project-meta">Frontend · UX · Dashboard</div>
-                        <h3>Interfaces dinámicas y reutilizables</h3>
-                        <p>
-                            Construcción de frontend enfocado en experiencia de usuario, reutilización
-                            de componentes y conexión eficiente con APIs.
-                        </p>
-                        <ul class="project-list">
-                            <li>React / Angular</li>
-                            <li>Diseño adaptable</li>
-                            <li>Componentización</li>
-                        </ul>
-                    </article>
-
-                    <article class="card project-card">
-                        <div class="project-meta">DevOps · Automatización · Entrega</div>
-                        <h3>Flujos de despliegue y calidad</h3>
-                        <p>
-                            Implementación de pipelines, contenedores y procesos de validación para
-                            lograr entregas más predecibles y sostenibles.
-                        </p>
-                        <ul class="project-list">
-                            <li>Docker</li>
-                            <li>Automatización CI/CD</li>
-                            <li>Control de calidad técnico</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="section">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-subtitle">
-                    Disponible para oportunidades remotas, proyectos freelance o colaboración profesional.
-                </p>
-
-                <div class="grid contact-grid">
-                    <div class="card contact-card">
-                        <h3>Información</h3>
-                        <div class="contact-item">
-                            <span class="contact-label">Nombre</span>
-                            <span class="contact-value">Alejandro Clemente</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Rol</span>
-                            <span class="contact-value">Full Stack Developer</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Ubicación</span>
-                            <span class="contact-value">Chile · Remoto</span>
-                        </div>
-                    </div>
-
-                    <div class="card contact-card">
-                        <h3>Enlaces</h3>
-                        <div class="contact-item">
-                            <span class="contact-label">LinkedIn</span>
-                            <a class="contact-value" href="https://linkedin.com/in/aclementcl" target="_blank"
-                                rel="noopener noreferrer">
-                                linkedin.com/in/aclementcl
-                            </a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">GitHub</span>
-                            <a class="contact-value" href="https://github.com/aclementcl" target="_blank"
-                                rel="noopener noreferrer">
-                                github.com/aclementcl
-                            </a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Email</span>
-                            <a class="contact-value" href="mailto:tuemail@correo.com">
-                                tuemail@correo.com
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <main id="app" aria-live="polite"></main>
 
     <footer>
-        <div class="container footer-wrap">
-            <span>© 2026 Alejandro Clemente. Todos los derechos reservados.</span>
-            <span>Desarrollado con HTML y CSS puro.</span>
-        </div>
+        <div class="container footer-wrap" id="site-footer"></div>
     </footer>
+
+    <noscript>
+        <div class="container no-js-message">
+            JavaScript is required to render this site.
+        </div>
+    </noscript>
+
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

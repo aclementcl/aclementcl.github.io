@@ -1,0 +1,200 @@
+{
+  "site": {
+    "lang": "en",
+    "title": "Alejandro Clemente | Senior Software Engineer",
+    "description": "Portfolio of Alejandro Clemente, a full stack developer focused on backend systems, frontend architecture, and reliable product delivery.",
+    "logo": "Alejandro Clemente",
+    "navigation": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Stack",
+        "href": "#stack"
+      },
+      {
+        "label": "Work",
+        "href": "#work"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Senior Software Engineer",
+    "title": "I build clear, reliable software for products that need to grow.",
+    "description": "I am Alejandro Clemente, a full stack developer working across Node.js, NestJS, React, and .NET. My focus is straightforward: ship maintainable systems, reduce complexity, and keep teams moving.",
+    "actions": [
+      {
+        "label": "Get in touch",
+        "href": "#contact",
+        "variant": "primary"
+      },
+      {
+        "label": "View work",
+        "href": "#work",
+        "variant": "secondary"
+      }
+    ],
+    "stats": [
+      {
+        "title": "Backend",
+        "text": "Node.js, NestJS, .NET, REST APIs"
+      },
+      {
+        "title": "Frontend",
+        "text": "React, Angular, TypeScript, reusable UI"
+      },
+      {
+        "title": "Delivery",
+        "text": "Docker, CI/CD, testing, data workflows"
+      }
+    ],
+    "focus": {
+      "eyebrow": "Selected focus",
+      "items": [
+        "Designing modular backend services that stay easy to extend.",
+        "Building frontend systems that balance clarity, speed, and reuse.",
+        "Improving delivery through automation, testing, and predictable releases."
+      ]
+    }
+  },
+  "about": {
+    "id": "about",
+    "title": "About",
+    "subtitle": "I work best on product teams that value clean architecture, pragmatic execution, and steady delivery.",
+    "cards": [
+      {
+        "eyebrow": "How I work",
+        "title": "Simple systems, strong foundations",
+        "text": "I care about structure, naming, separation of concerns, and code that remains readable after the first release. The goal is not abstraction for its own sake, but software that survives change."
+      },
+      {
+        "eyebrow": "What I bring",
+        "title": "Product thinking with engineering discipline",
+        "text": "I can move across backend, frontend, data, and delivery workflows while keeping the outcome tied to business value, maintainability, and production readiness."
+      }
+    ]
+  },
+  "stack": {
+    "id": "stack",
+    "title": "Stack",
+    "subtitle": "Technologies I use to build web platforms, internal tools, and API-driven products.",
+    "categories": [
+      {
+        "eyebrow": "Backend",
+        "items": [
+          "Node.js",
+          "NestJS",
+          ".NET / ASP.NET Core",
+          "REST APIs",
+          "Microservices"
+        ]
+      },
+      {
+        "eyebrow": "Frontend",
+        "items": [
+          "React",
+          "Angular",
+          "TypeScript",
+          "Reusable components",
+          "Responsive interfaces"
+        ]
+      },
+      {
+        "eyebrow": "Data",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQL Server",
+          "Data migration",
+          "Query optimization"
+        ]
+      },
+      {
+        "eyebrow": "Delivery",
+        "items": [
+          "Docker",
+          "CI/CD",
+          "Git workflows",
+          "Jest / testing",
+          "SonarQube"
+        ]
+      }
+    ]
+  },
+  "work": {
+    "id": "work",
+    "title": "Work",
+    "subtitle": "A few examples of the systems and product areas where I can contribute.",
+    "projects": [
+      {
+        "meta": "Content platforms",
+        "title": "Structured systems for evolving content operations",
+        "description": "Backend and admin workflows for content-heavy platforms that need clean data models, migration support, and stable long-term maintenance.",
+        "items": [
+          "Maintainable architecture",
+          "Integration with existing systems",
+          "Operational continuity"
+        ]
+      },
+      {
+        "meta": "API platforms",
+        "title": "Modular backend services for web products",
+        "description": "Domain-oriented APIs designed for growth, testing, authentication, and a smooth path toward service decomposition when the product needs it.",
+        "items": [
+          "NestJS / .NET",
+          "Clear boundaries",
+          "Ready for CI/CD"
+        ]
+      },
+      {
+        "meta": "Product interfaces",
+        "title": "Frontend systems that stay consistent as they scale",
+        "description": "Interfaces built around reusable components, straightforward UX, and efficient integration with backend services and internal APIs.",
+        "items": [
+          "React / Angular",
+          "Responsive design",
+          "Component-driven UI"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "subtitle": "Available for remote roles, freelance work, and technical collaboration from Chile.",
+    "note": "Based in Chile. Open to remote collaboration.",
+    "links": [
+      {
+        "platform": "LinkedIn",
+        "handle": "linkedin.com/in/aclementcl",
+        "href": "https://linkedin.com/in/aclementcl",
+        "icon": "linkedin",
+        "external": true
+      },
+      {
+        "platform": "GitHub",
+        "handle": "github.com/aclementcl",
+        "href": "https://github.com/aclementcl",
+        "icon": "github",
+        "external": true
+      },
+      {
+        "platform": "Email",
+        "handle": "alejandro.clemente.i@gmail.com",
+        "href": "mailto:alejandro.clemente.i@gmail.com",
+        "icon": "email",
+        "external": false
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Alejandro Clemente",
+    "tagline": ""
+  }
+}

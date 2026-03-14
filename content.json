@@ -5,53 +5,24 @@
     "description": "Portfolio of Alejandro Clemente, a full stack developer focused on backend systems, frontend architecture, and reliable product delivery.",
     "logo": "Alejandro Clemente",
     "navigation": [
-      {
-        "label": "About",
-        "href": "#about"
-      },
-      {
-        "label": "Stack",
-        "href": "#stack"
-      },
-      {
-        "label": "Work",
-        "href": "#work"
-      },
-      {
-        "label": "Contact",
-        "href": "#contact"
-      }
+      { "label": "About", "href": "#about" },
+      { "label": "Stack", "href": "#stack" },
+      { "label": "Work", "href": "#work" },
+      { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
     "eyebrow": "Senior Software Engineer",
-    "title": "I build clear, reliable software for products that need to grow.",
+    "title": "",
     "description": "I am Alejandro Clemente, a full stack developer working across Node.js, NestJS, React, and .NET. My focus is straightforward: ship maintainable systems, reduce complexity, and keep teams moving.",
     "actions": [
-      {
-        "label": "Get in touch",
-        "href": "#contact",
-        "variant": "primary"
-      },
-      {
-        "label": "View work",
-        "href": "#work",
-        "variant": "secondary"
-      }
+      { "label": "Get in touch", "href": "#contact", "variant": "primary" },
+      { "label": "View work", "href": "#work", "variant": "secondary" }
     ],
     "stats": [
-      {
-        "title": "Backend",
-        "text": "Node.js, NestJS, .NET, REST APIs"
-      },
-      {
-        "title": "Frontend",
-        "text": "React, Angular, TypeScript, reusable UI"
-      },
-      {
-        "title": "Delivery",
-        "text": "Docker, CI/CD, testing, data workflows"
-      }
+      { "title": "Backend", "text": "Node.js, NestJS, .NET, REST APIs" },
+      { "title": "Frontend", "text": "React, Angular, TypeScript, reusable UI" },
+      { "title": "Delivery", "text": "Docker, CI/CD, testing, data workflows" }
     ],
     "focus": {
       "eyebrow": "Selected focus",
@@ -63,7 +34,6 @@
     }
   },
   "about": {
-    "id": "about",
     "title": "About",
     "subtitle": "I work best on product teams that value clean architecture, pragmatic execution, and steady delivery.",
     "cards": [
@@ -80,54 +50,28 @@
     ]
   },
   "stack": {
-    "id": "stack",
     "title": "Stack",
     "subtitle": "Technologies I use to build web platforms, internal tools, and API-driven products.",
     "categories": [
       {
         "eyebrow": "Backend",
-        "items": [
-          "Node.js",
-          "NestJS",
-          ".NET / ASP.NET Core",
-          "REST APIs",
-          "Microservices"
-        ]
+        "items": ["Node.js", "NestJS", ".NET / ASP.NET Core", "REST APIs", "Microservices"]
       },
       {
         "eyebrow": "Frontend",
-        "items": [
-          "React",
-          "Angular",
-          "TypeScript",
-          "Reusable components",
-          "Responsive interfaces"
-        ]
+        "items": ["React", "Angular", "TypeScript", "Reusable components", "Responsive interfaces"]
       },
       {
         "eyebrow": "Data",
-        "items": [
-          "PostgreSQL",
-          "MySQL",
-          "SQL Server",
-          "Data migration",
-          "Query optimization"
-        ]
+        "items": ["PostgreSQL", "MySQL", "SQL Server", "Data migration", "Query optimization"]
       },
       {
         "eyebrow": "Delivery",
-        "items": [
-          "Docker",
-          "CI/CD",
-          "Git workflows",
-          "Jest / testing",
-          "SonarQube"
-        ]
+        "items": ["Docker", "CI/CD", "Git workflows", "Jest / testing", "SonarQube"]
       }
     ]
   },
   "work": {
-    "id": "work",
     "title": "Work",
     "subtitle": "A few examples of the systems and product areas where I can contribute.",
     "projects": [
@@ -135,36 +79,23 @@
         "meta": "Content platforms",
         "title": "Structured systems for evolving content operations",
         "description": "Backend and admin workflows for content-heavy platforms that need clean data models, migration support, and stable long-term maintenance.",
-        "items": [
-          "Maintainable architecture",
-          "Integration with existing systems",
-          "Operational continuity"
-        ]
+        "items": ["Maintainable architecture", "Integration with existing systems", "Operational continuity"]
       },
       {
         "meta": "API platforms",
         "title": "Modular backend services for web products",
         "description": "Domain-oriented APIs designed for growth, testing, authentication, and a smooth path toward service decomposition when the product needs it.",
-        "items": [
-          "NestJS / .NET",
-          "Clear boundaries",
-          "Ready for CI/CD"
-        ]
+        "items": ["NestJS / .NET", "Clear boundaries", "Ready for CI/CD"]
       },
       {
         "meta": "Product interfaces",
         "title": "Frontend systems that stay consistent as they scale",
         "description": "Interfaces built around reusable components, straightforward UX, and efficient integration with backend services and internal APIs.",
-        "items": [
-          "React / Angular",
-          "Responsive design",
-          "Component-driven UI"
-        ]
+        "items": ["React / Angular", "Responsive design", "Component-driven UI"]
       }
     ]
   },
   "contact": {
-    "id": "contact",
     "eyebrow": "Contact",
     "title": "Let's talk.",
     "subtitle": "Available for remote roles, freelance work, and technical collaboration from Chile.",
@@ -195,6 +126,6 @@
   },
   "footer": {
     "copyright": "© 2026 Alejandro Clemente",
-    "tagline": ""
+    "tagline": "Built with plain HTML, CSS, and JavaScript."
   }
 }

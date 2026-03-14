@@ -17,11 +17,113 @@
         </div>
     </header>
 
-    <main id="app" aria-live="polite"></main>
+    <main id="app" aria-live="polite">
+        <section class="hero">
+            <div class="container hero-wrap">
+                <div class="hero-copy">
+                    <p class="tag" id="hero-eyebrow"></p>
+                    <h1 id="hero-title"></h1>
+                    <p class="hero-text" id="hero-description"></p>
+                    <div class="hero-actions" id="hero-actions"></div>
+                    <div class="hero-stats" aria-label="Core areas" id="hero-stats"></div>
+                </div>
+
+                <aside class="card hero-card">
+                    <p class="eyebrow" id="hero-focus-eyebrow"></p>
+                    <ul class="hero-list" id="hero-focus-list"></ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-bind="about.title"></h2>
+                <p class="section-subtitle" data-bind="about.subtitle"></p>
+                <div class="grid about-grid" id="about-cards"></div>
+            </div>
+        </section>
+
+        <section id="stack" class="section">
+            <div class="container">
+                <h2 class="section-title" data-bind="stack.title"></h2>
+                <p class="section-subtitle" data-bind="stack.subtitle"></p>
+                <div class="grid skills-grid" id="stack-categories"></div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <div class="container">
+                <h2 class="section-title" data-bind="work.title"></h2>
+                <p class="section-subtitle" data-bind="work.subtitle"></p>
+                <div class="grid projects-grid" id="work-projects"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-shell">
+                    <p class="eyebrow" data-bind="contact.eyebrow"></p>
+                    <h2 class="section-title" data-bind="contact.title"></h2>
+                    <p class="section-subtitle" data-bind="contact.subtitle"></p>
+                    <div class="contact-links" aria-label="Contact links" id="contact-links"></div>
+                    <p class="contact-note" data-bind="contact.note"></p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container footer-wrap" id="site-footer"></div>
     </footer>
+
+    <template id="nav-link-template">
+        <a></a>
+    </template>
+
+    <template id="hero-action-template">
+        <a class="btn"></a>
+    </template>
+
+    <template id="hero-stat-template">
+        <div class="stat">
+            <strong></strong>
+            <span></span>
+        </div>
+    </template>
+
+    <template id="about-card-template">
+        <article class="card">
+            <p class="eyebrow"></p>
+            <h3></h3>
+            <p></p>
+        </article>
+    </template>
+
+    <template id="skill-card-template">
+        <article class="card skill-card">
+            <p class="eyebrow"></p>
+            <ul class="skill-list"></ul>
+        </article>
+    </template>
+
+    <template id="project-card-template">
+        <article class="card project-card">
+            <p class="project-meta"></p>
+            <h3></h3>
+            <p class="project-description"></p>
+            <ul class="project-list"></ul>
+        </article>
+    </template>
+
+    <template id="contact-link-template">
+        <a class="contact-link">
+            <span class="contact-icon" aria-hidden="true"></span>
+            <span class="contact-copy">
+                <span class="contact-platform"></span>
+                <span class="contact-handle"></span>
+            </span>
+        </a>
+    </template>
 
     <noscript>
         <div class="container no-js-message">

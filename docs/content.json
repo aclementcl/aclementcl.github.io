@@ -29,6 +29,7 @@
       },
       {
         "label": "Resume",
+        "title": "Download Resume (PDF)",
         "href": "resumes/aclemente-dev.pdf",
         "icon": "resume",
         "external": false,

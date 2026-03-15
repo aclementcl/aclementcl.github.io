@@ -21,21 +21,50 @@ const ICONS = {
     `
 };
 
+const CONTENT_URL = new URL("./content.json", import.meta.url);
+const PERSON_SCHEMA_URL = new URL("./person.schema.json", import.meta.url);
+
 void init();
 
 async function init() {
-    try {
-        const response = await fetch("./content.json", { cache: "no-store" });
+    const [contentResult, schemaResult] = await Promise.allSettled([
+        fetchJson(CONTENT_URL),
+        fetchJson(PERSON_SCHEMA_URL)
+    ]);
 
-        if (!response.ok) {
-            throw new Error(`Failed to load content.json: ${response.status}`);
+    if (schemaResult.status === "fulfilled") {
+        injectStructuredData(schemaResult.value);
+    } else {
+        console.warn("Failed to load person.schema.json", schemaResult.reason);
+    }
+
+    try {
+        if (contentResult.status !== "fulfilled") {
+            throw contentResult.reason;
         }
 
-        const content = await response.json();
+        const content = contentResult.value;
         renderSite(content);
     } catch (error) {
         renderError(error);
     }
+}
+
+async function fetchJson(url) {
+    const response = await fetch(url, { cache: "no-store" });
+
+    if (!response.ok) {
+        throw new Error(`Failed to load ${url.pathname}: ${response.status}`);
+    }
+
+    return response.json();
+}
+
+function injectStructuredData(data) {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(data);
+    document.head.append(script);
 }
 
 function renderSite(content) {
@@ -62,9 +91,10 @@ function renderHero(hero) {
     const links = document.querySelector("#hero-links");
     links.replaceChildren(...hero.links.map((item) => {
         const link = cloneTemplate("#icon-link-template");
+        const tooltip = item.title ?? item.label;
         link.href = item.href;
         link.setAttribute("aria-label", item.label);
-        link.title = item.label;
+        link.title = tooltip;
         link.querySelector(".icon-link-mark").innerHTML = ICONS[item.icon] ?? "";
 
         if (item.download) {

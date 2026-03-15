@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://aclemente.dev/#person",
+  "name": "Alejandro Clemente",
+  "url": "https://aclemente.dev/",
+  "image": "https://aclemente.dev/assets/ac.jpeg",
+  "jobTitle": "Senior Software Engineer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Valparaiso",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://github.com/aclementcl",
+    "https://linkedin.com/in/aclementcl"
+  ],
+  "knowsAbout": [
+    ".NET",
+    "Node.js",
+    "React",
+    "Docker",
+    "PostgreSQL",
+    "Backend Architecture",
+    "API Design",
+    "Data Migration"
+  ],
+  "mainEntityOfPage": "https://aclemente.dev/",
+  "subjectOf": [
+    "https://aclemente.dev/resumes/aclemente-dev.pdf"
+  ]
+}

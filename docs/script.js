@@ -158,6 +158,8 @@ function renderContact(contact) {
     links.replaceChildren(...contact.links.map((item) => {
         const link = cloneTemplate("#contact-link-template");
         link.href = item.href;
+        link.setAttribute("aria-label", item.platform);
+        link.title = item.handle;
 
         if (item.external) {
             link.target = "_blank";
@@ -165,8 +167,6 @@ function renderContact(contact) {
         }
 
         link.querySelector(".contact-icon").innerHTML = ICONS[item.icon] ?? "";
-        link.querySelector(".contact-platform").textContent = item.platform;
-        link.querySelector(".contact-handle").textContent = item.handle;
         return link;
     }));
 }
@@ -174,12 +174,10 @@ function renderContact(contact) {
 function renderFooter(footer) {
     const footerNode = document.querySelector("#site-footer");
     const copyright = document.createElement("span");
-    const tagline = document.createElement("span");
 
     copyright.textContent = footer.copyright;
-    tagline.textContent = footer.tagline;
 
-    footerNode.replaceChildren(copyright, tagline);
+    footerNode.replaceChildren(copyright);
 }
 
 function bindSectionCopy(sectionName, content) {

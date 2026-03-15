@@ -125,7 +125,6 @@
     ]
   },
   "footer": {
-    "copyright": "© 2026 Alejandro Clemente",
-    "tagline": "Built with plain HTML, CSS, and JavaScript."
+    "copyright": "© 2026 Alejandro Clemente"
   }
 }

@@ -1,4 +1,9 @@
 .ambient {
+    --ambient-green-rgb: 0, 199, 138;
+    --ambient-green: #00c78a;
+}
+
+.ambient {
     position: fixed;
     inset: 0;
     overflow: hidden;
@@ -22,8 +27,8 @@
 
 .ambient::before {
     background:
-        linear-gradient(rgba(0, 199, 138, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 199, 138, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(var(--ambient-green-rgb), 0.11) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--ambient-green-rgb), 0.11) 1px, transparent 1px);
     background-size: 96px 96px;
     opacity: 0.38;
     transform-origin: center;
@@ -32,8 +37,8 @@
 
 .ambient::after {
     background:
-        repeating-linear-gradient(0deg, transparent 0 16px, rgba(0, 199, 138, 0.08) 16px 17px),
-        repeating-linear-gradient(90deg, transparent 0 16px, rgba(0, 199, 138, 0.08) 16px 17px);
+        repeating-linear-gradient(0deg, transparent 0 16px, rgba(var(--ambient-green-rgb), 0.09) 16px 17px),
+        repeating-linear-gradient(90deg, transparent 0 16px, rgba(var(--ambient-green-rgb), 0.09) 16px 17px);
     opacity: 0.32;
     animation: scanlineDrift 10s linear infinite;
 }
@@ -49,8 +54,8 @@
     left: 12%;
     width: 18px;
     height: 18px;
-    background: radial-gradient(circle, rgba(0, 199, 138, 0.95), rgba(0, 199, 138, 0.1) 72%, transparent 100%);
-    box-shadow: 0 0 32px rgba(0, 199, 138, 0.7);
+    background: radial-gradient(circle, rgba(var(--ambient-green-rgb), 0.96), rgba(var(--ambient-green-rgb), 0.12) 72%, transparent 100%);
+    box-shadow: 0 0 32px rgba(var(--ambient-green-rgb), 0.72);
     animation: nodeA 7s ease-in-out infinite alternate;
 }
 
@@ -59,8 +64,8 @@
     top: 24%;
     width: 16px;
     height: 16px;
-    background: radial-gradient(circle, rgba(0, 199, 138, 0.92), rgba(0, 199, 138, 0.1) 72%, transparent 100%);
-    box-shadow: 0 0 28px rgba(0, 199, 138, 0.62);
+    background: radial-gradient(circle, rgba(var(--ambient-green-rgb), 0.94), rgba(var(--ambient-green-rgb), 0.12) 72%, transparent 100%);
+    box-shadow: 0 0 28px rgba(var(--ambient-green-rgb), 0.64);
     animation: nodeB 9s ease-in-out infinite alternate;
 }
 
@@ -69,16 +74,16 @@
     bottom: 18%;
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle, rgba(0, 199, 138, 0.98), rgba(0, 199, 138, 0.1) 72%, transparent 100%);
-    box-shadow: 0 0 36px rgba(0, 199, 138, 0.74);
+    background: radial-gradient(circle, rgba(var(--ambient-green-rgb), 0.99), rgba(var(--ambient-green-rgb), 0.12) 72%, transparent 100%);
+    box-shadow: 0 0 36px rgba(var(--ambient-green-rgb), 0.76);
     animation: nodeC 8s ease-in-out infinite alternate;
 }
 
 .ambient-grid {
     inset: -18%;
     background-image:
-        linear-gradient(rgba(0, 199, 138, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 199, 138, 0.3) 1px, transparent 1px);
+        linear-gradient(rgba(var(--ambient-green-rgb), 0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--ambient-green-rgb), 0.34) 1px, transparent 1px);
     background-size: 40px 40px;
     opacity: 0.72;
     transform-origin: center;

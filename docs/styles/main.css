@@ -59,26 +59,6 @@ body {
     pointer-events: none;
 }
 
-.page-photo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin: 0;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.page-photo-image {
-    width: 104px;
-    height: 104px;
-    object-fit: cover;
-    border-radius: 14px;
-    border: 1px solid rgba(0, 199, 138, 0.28);
-    box-shadow:
-        0 0 0 1px rgba(0, 199, 138, 0.08),
-        0 18px 40px rgba(0, 0, 0, 0.28);
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -184,15 +164,6 @@ svg {
     .hero,
     .section {
         padding-bottom: 44px;
-    }
-
-    .page-photo {
-        transform: translate(-50%, -44%);
-    }
-
-    .page-photo-image {
-        width: 88px;
-        height: 88px;
     }
 
     body {

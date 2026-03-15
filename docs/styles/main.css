@@ -38,8 +38,8 @@ body {
 
 .page {
     width: min(92%, var(--max-width));
-    margin: 0 auto;
-    padding: 72px 56px 88px;
+    margin: 40px auto 0;
+    padding: 108px 56px 88px;
     background: rgba(5, 8, 22, 0.88);
     border: 1px solid rgba(26, 34, 51, 0.92);
     border-radius: 18px;
@@ -57,6 +57,26 @@ body {
     border: 1px solid rgba(125, 211, 252, 0.08);
     border-radius: 12px;
     pointer-events: none;
+}
+
+.page-photo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.page-photo-image {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 199, 138, 0.28);
+    box-shadow:
+        0 0 0 1px rgba(0, 199, 138, 0.08),
+        0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
 a {
@@ -153,7 +173,8 @@ svg {
 
 @media (max-width: 640px) {
     .page {
-        padding: 48px 24px 56px;
+        margin-top: 32px;
+        padding: 88px 24px 56px;
     }
 
     .page::before {
@@ -163,6 +184,15 @@ svg {
     .hero,
     .section {
         padding-bottom: 44px;
+    }
+
+    .page-photo {
+        transform: translate(-50%, -44%);
+    }
+
+    .page-photo-image {
+        width: 88px;
+        height: 88px;
     }
 
     body {

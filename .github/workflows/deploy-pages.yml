@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - docs/**
+      - scripts/**
       - .github/workflows/deploy-pages.yml
   workflow_dispatch:
 
@@ -31,6 +32,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -39,6 +43,9 @@ jobs:
 
       - name: Validate script.js
         run: node --check docs/script.js
+
+      - name: Build resume PDFs
+        run: node scripts/build-resumes.mjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

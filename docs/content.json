@@ -26,6 +26,13 @@
         "href": "mailto:alejandro.clemente.i@gmail.com",
         "icon": "email",
         "external": false
+      },
+      {
+        "label": "Resume",
+        "href": "resumes/aclemente-dev.pdf",
+        "icon": "resume",
+        "external": false,
+        "download": "aclemente-dev.pdf"
       }
     ]
   },

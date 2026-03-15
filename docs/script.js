@@ -13,6 +13,11 @@ const ICONS = {
         <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
             <path d="M3.75 5.5h16.5A1.75 1.75 0 0 1 22 7.25v9.5A1.75 1.75 0 0 1 20.25 18.5H3.75A1.75 1.75 0 0 1 2 16.75v-9.5A1.75 1.75 0 0 1 3.75 5.5Zm0 1.5a.25.25 0 0 0-.25.25v.19l8.11 5.36a.75.75 0 0 0 .78 0l8.11-5.36v-.19a.25.25 0 0 0-.25-.25H3.75Zm16.5 10a.25.25 0 0 0 .25-.25V9.23l-7.28 4.82a2.25 2.25 0 0 1-2.48 0L3.5 9.23v7.52c0 .14.11.25.25.25h16.5Z" />
         </svg>
+    `,
+    resume: `
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M6.75 2.5h7.38l4.12 4.12v10.63A2.75 2.75 0 0 1 15.5 20h-8A2.75 2.75 0 0 1 4.75 17.25v-12A2.75 2.75 0 0 1 7.5 2.5h-.75Zm7 .94V7h3.56L13.75 3.44Zm-5.5 7.31a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm3.5 3.5a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+        </svg>
     `
 };
 
@@ -61,6 +66,10 @@ function renderHero(hero) {
         link.setAttribute("aria-label", item.label);
         link.title = item.label;
         link.querySelector(".icon-link-mark").innerHTML = ICONS[item.icon] ?? "";
+
+        if (item.download) {
+            link.download = item.download;
+        }
 
         if (item.external) {
             link.target = "_blank";

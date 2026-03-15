@@ -18,6 +18,8 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    overflow-x: hidden;
     background: var(--bg);
     color: var(--text);
     font-family: "JetBrains Mono", monospace;
@@ -25,6 +27,115 @@ body {
     line-height: 1.9;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    display: grid;
+    place-items: center;
+    padding: 48px 20px;
+}
+
+.ambient {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ambient-orb,
+.ambient-grid {
+    position: absolute;
+    pointer-events: none;
+}
+
+.ambient::before,
+.ambient::after {
+    content: "";
+    position: absolute;
+    inset: -18%;
+    pointer-events: none;
+}
+
+.ambient::before {
+    background:
+        radial-gradient(circle at center, rgba(125, 211, 252, 0.12), transparent 42%),
+        conic-gradient(from 0deg, transparent 0deg, rgba(125, 211, 252, 0.08) 70deg, transparent 140deg, rgba(125, 211, 252, 0.07) 220deg, transparent 300deg);
+    opacity: 0.6;
+    animation: haloSpin 28s linear infinite;
+}
+
+.ambient::after {
+    background:
+        linear-gradient(transparent 0, rgba(125, 211, 252, 0.04) 48%, transparent 100%);
+    background-size: 100% 220px;
+    opacity: 0.35;
+    animation: scanlineDrift 10s linear infinite;
+}
+
+.ambient-orb {
+    border-radius: 999px;
+    filter: blur(84px);
+    opacity: 0.72;
+}
+
+.ambient-orb-a {
+    top: 2%;
+    left: -2%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(125, 211, 252, 0.34), transparent 68%);
+    animation: floatA 16s ease-in-out infinite alternate;
+}
+
+.ambient-orb-b {
+    right: -4%;
+    top: 10%;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(125, 211, 252, 0.24), transparent 70%);
+    animation: floatB 20s ease-in-out infinite alternate;
+}
+
+.ambient-orb-c {
+    left: 22%;
+    bottom: -8%;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(125, 211, 252, 0.18), transparent 72%);
+    animation: floatC 24s ease-in-out infinite alternate;
+}
+
+.ambient-grid {
+    inset: -12%;
+    background-image:
+        linear-gradient(rgba(125, 211, 252, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(125, 211, 252, 0.12) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.82), transparent 80%);
+    opacity: 0.48;
+    transform-origin: center;
+    animation: gridShift 16s linear infinite, gridPulse 7s ease-in-out infinite alternate;
+}
+
+.page {
+    width: min(92%, var(--max-width));
+    margin: 0 auto;
+    padding: 72px 56px 88px;
+    background: rgba(5, 8, 22, 0.88);
+    border: 1px solid rgba(26, 34, 51, 0.92);
+    border-radius: 18px;
+    box-shadow:
+        0 0 0 1px rgba(125, 211, 252, 0.05),
+        0 32px 80px rgba(0, 0, 0, 0.45);
+    position: relative;
+    z-index: 1;
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(125, 211, 252, 0.08);
+    border-radius: 12px;
+    pointer-events: none;
 }
 
 a {
@@ -34,12 +145,6 @@ a {
 
 svg {
     display: block;
-}
-
-.page {
-    width: min(92%, var(--max-width));
-    margin: 0 auto;
-    padding: 96px 0 120px;
 }
 
 .hero,
@@ -127,7 +232,11 @@ svg {
 
 @media (max-width: 640px) {
     .page {
-        padding: 72px 0 88px;
+        padding: 48px 24px 56px;
+    }
+
+    .page::before {
+        inset: 10px;
     }
 
     .hero,
@@ -137,5 +246,75 @@ svg {
 
     body {
         font-size: 16px;
+    }
+}
+
+@keyframes gridShift {
+    0% {
+        transform: perspective(1100px) rotateX(72deg) translate3d(0, 0, 0) scale(1.08);
+    }
+
+    100% {
+        transform: perspective(1100px) rotateX(72deg) translate3d(32px, 32px, 0) scale(1.14);
+    }
+}
+
+@keyframes floatA {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate3d(110px, 48px, 0) scale(1.08);
+    }
+}
+
+@keyframes floatB {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate3d(-76px, 96px, 0) scale(1.12);
+    }
+}
+
+@keyframes floatC {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate3d(62px, -82px, 0) scale(1.06);
+    }
+}
+
+@keyframes gridPulse {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.52;
+    }
+}
+
+@keyframes haloSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.08);
+    }
+}
+
+@keyframes scanlineDrift {
+    0% {
+        transform: translateY(-220px);
+    }
+
+    100% {
+        transform: translateY(220px);
     }
 }

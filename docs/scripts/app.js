@@ -97,7 +97,11 @@ function renderHero(hero) {
         link.setAttribute("aria-label", item.label);
         link.title = tooltip;
         link.querySelector(".icon-link-mark").innerHTML = ICONS[item.icon] ?? "";
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (event) => {
+            if (item.icon === "email") {
+                handleEmailClick(event, link, item);
+            }
+
             window.portfolioAnalytics?.trackEvent("portfolio_link_click", {
                 link_label: item.label,
                 link_icon: item.icon,
@@ -139,6 +143,36 @@ function cloneTemplate(selector) {
     }
 
     return template.content.firstElementChild.cloneNode(true);
+}
+
+async function handleEmailClick(event, link, item) {
+    const email = item.href.replace(/^mailto:/u, "");
+
+    if (!email) {
+        return;
+    }
+
+    event.preventDefault();
+
+    try {
+        await navigator.clipboard.writeText(email);
+        setTemporaryTitle(link, "Copied Email");
+        window.portfolioAnalytics?.trackEvent("portfolio_email_copied", {
+            email_address: email
+        });
+    } catch (error) {
+        console.warn("Clipboard copy failed, falling back to mailto.", error);
+        window.location.href = item.href;
+    }
+}
+
+function setTemporaryTitle(link, title) {
+    const previousTitle = link.title;
+    link.title = title;
+
+    window.setTimeout(() => {
+        link.title = previousTitle;
+    }, 2000);
 }
 
 function renderError(error) {

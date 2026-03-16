@@ -13,9 +13,10 @@ Personal portfolio site for Alejandro Clemente.
 ## Project Structure
 
 - `docs/index.html`: main page shell
-- `docs/content.json`: editable site content
-- `docs/person.schema.json`: structured data for SEO
-- `docs/script.js`: content rendering and metadata injection
+- `docs/data/content.json`: editable site content
+- `docs/data/person.schema.json`: structured data for SEO
+- `docs/scripts/app.js`: content rendering and metadata injection
+- `docs/scripts/analytics.js`: analytics wiring
 - `docs/styles/main.css`: layout and base UI
 - `docs/styles/photo.css`: profile photo styles
 - `docs/styles/ambient.css`: animated background styles
@@ -56,8 +57,8 @@ Deployment is handled by GitHub Actions on push to `main`.
 
 Workflow:
 
-1. Validate `docs/content.json`
-2. Validate `docs/script.js`
+1. Validate `docs/data/content.json`
+2. Validate `docs/scripts/app.js`
 3. Build resume PDFs from Typst
 4. Publish `docs/` to GitHub Pages
 

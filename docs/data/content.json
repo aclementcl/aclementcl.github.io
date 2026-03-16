@@ -2,7 +2,10 @@
   "site": {
     "lang": "en",
     "title": "Alejandro Clemente | Senior Software Engineer",
-    "description": "Senior software engineer focused on scalable backend systems and modern web applications."
+    "description": "Senior software engineer focused on scalable backend systems and modern web applications.",
+    "analytics": {
+      "measurementId": ""
+    }
   },
   "hero": {
     "role": "Senior Software Engineer",

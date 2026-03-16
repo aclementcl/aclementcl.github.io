@@ -21,8 +21,8 @@ const ICONS = {
     `
 };
 
-const CONTENT_URL = new URL("./content.json", import.meta.url);
-const PERSON_SCHEMA_URL = new URL("./person.schema.json", import.meta.url);
+const CONTENT_URL = new URL("../data/content.json", import.meta.url);
+const PERSON_SCHEMA_URL = new URL("../data/person.schema.json", import.meta.url);
 
 void init();
 
@@ -69,6 +69,7 @@ function injectStructuredData(data) {
 
 function renderSite(content) {
     applyMetadata(content.site);
+    window.portfolioAnalytics?.initializeAnalytics(content.site.analytics);
     renderHero(content.hero);
     renderWhatIDo(content.whatIDo);
 }
@@ -96,6 +97,15 @@ function renderHero(hero) {
         link.setAttribute("aria-label", item.label);
         link.title = tooltip;
         link.querySelector(".icon-link-mark").innerHTML = ICONS[item.icon] ?? "";
+        link.addEventListener("click", () => {
+            window.portfolioAnalytics?.trackEvent("portfolio_link_click", {
+                link_label: item.label,
+                link_icon: item.icon,
+                link_url: item.href,
+                link_external: Boolean(item.external),
+                link_download: Boolean(item.download)
+            });
+        });
 
         if (item.download) {
             link.download = item.download;
@@ -137,7 +147,7 @@ function renderError(error) {
     const app = document.querySelector("#app");
     const hint = window.location.protocol === "file:"
         ? "Start a local server such as `npx serve docs`."
-        : "Check that content.json is available next to index.html.";
+        : "Check that data/content.json is available under docs/data/.";
 
     app.innerHTML = `
         <section class="hero">

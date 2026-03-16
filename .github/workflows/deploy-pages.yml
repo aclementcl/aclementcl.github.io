@@ -39,10 +39,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Validate content.json
-        run: node -e "JSON.parse(require('fs').readFileSync('docs/content.json', 'utf8'))"
+        run: node -e "JSON.parse(require('fs').readFileSync('docs/data/content.json', 'utf8'))"
 
-      - name: Validate script.js
-        run: node --check docs/script.js
+      - name: Validate app.js
+        run: node --check docs/scripts/app.js
 
       - name: Build resume PDFs
         run: node scripts/build-resumes.mjs

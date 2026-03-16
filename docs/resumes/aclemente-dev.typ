@@ -9,6 +9,7 @@
   pagecount: "true",
   date: "2026-02-24",
   contacts: (
+    (text: "aclemente.dev", link: "https://aclemente.dev/"),
     (text: "LinkedIn", link: "https://www.linkedin.com/in/aclementcl/"),
     (text: "Github", link: "https://www.github.com/aclementcl"),
     (text: "alejandro.clemente.i@gmail.com", link: "mailto:alejandro.clemente.i@gmail.com"),
